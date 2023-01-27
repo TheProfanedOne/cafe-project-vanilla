@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Wild World';
+    src: url(font/wild_world.otf) format("opentype");
+}
+
+body { margin: 0; }
+
+:root {
+    background-color: rgb(23, 39, 39);
+    font-family: sans-serif;
+}
+
+#banner {
+    font-family: 'Wild World';
+    font-size: 7em;
+    color: antiquewhite;
+    padding: 0.3em 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(../images/banner.jpg);
+    background-color: rgb(37, 24, 4);
+}
+
+#foot {
+    width: 100%;
+    position: absolute;
+    bottom: 0vh;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    padding: 10px 0;
+    background-color: #22130d;
+    color: antiquewhite;
+}
+
+table img {
+    height: 109px;
+    width: auto;
+}
+
+table {
+    color: antiquewhite;
+}
