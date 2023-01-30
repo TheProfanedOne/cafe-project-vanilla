@@ -25,18 +25,21 @@ define('SPECIALS', [
         'name'     => 'Oatmeal with Toast and Fruit',
         'cost'     => '$'.number_format(0.0, 2),
         'image'    => 'images/specials/oatmeal.jpg',
+        'imageAlt' => 'An image of Oatmeal with Toast and Fruit'
     ],
     [
         'category' => 'Dinner',
         'name'     => 'Steak Salad',
         'cost'     => '$'.number_format(0.0, 2),
         'image'    => 'images/specials/steak_salad.jpg',
+        'imageAlt' => 'An image of a Steak Salad'
     ],
     [
         'category' => 'Lunch',
         'name'     => 'Grilled Cheese and Tomato Soup',
         'cost'     => '$'.number_format(0.0, 2),
         'image'    => 'images/specials/grilled_cheese.jpg',
+        'imageAlt' => 'An image of Grilled Cheese with Tomato Soup'
     ],
     [
         'category' => 'Breakfast',
