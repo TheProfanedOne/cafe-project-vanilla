@@ -12,38 +12,94 @@ body { margin: 0; }
     font-family: sans-serif;
 }
 
+#container {
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(37, 24, 4);
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 1 auto;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: antiquewhite;
+    padding: 10px 0;
+    border-right: 1px solid antiquewhite;
+    border-left: 1px solid antiquewhite;
+}
+
+nav a:first-of-type { border-left: 0px; }
+nav a:last-of-type  { border-right: 0px; }
+
 #banner {
     font-family: 'Wild World';
     font-size: 7em;
     color: antiquewhite;
     padding: 0.3em 0;
     display: flex;
-    flex-flow: column wrap;
     justify-self: center;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-image: url(../images/banner.jpg);
-    background-color: rgb(37, 24, 4);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+table, td { border: 1px solid; }
+th        { border: 2px solid; }
+th, td {
+    width: 12rem;
+    box-sizing: border-box;
+    position: relative;
+}
+table img {
+    height: 109px;
+    width: auto;
+    box-sizing: border-box;
+}
+table {
+    border-collapse: collapse;
+    color: antiquewhite;
+}
+td {
+    height: 115px !important;
+}
+td.full-row {
+    text-align: center;
+    padding: 20px 0;
+}
+td.with-image {
+    padding: 0;
 }
 
 #foot {
     width: 100%;
-    position: absolute;
-    bottom: 0vh;
     text-align: center;
     font-size: 1.5em;
     font-style: italic;
     padding: 10px 0;
     background-color: #22130d;
     color: antiquewhite;
-}
-
-table img {
-    height: 109px;
-    width: auto;
-}
-
-table {
-    color: antiquewhite;
+    flex: 0 1 auto;
 }

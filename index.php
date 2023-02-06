@@ -9,22 +9,20 @@
         <title>Cafe Home Page</title>
 
         <?php
-
-            const INCL_PATH = 'includes/';
-        
-            include INCL_PATH.'menu.php';
-
+            const INCL = 'includes/';
+            include_once INCL.'specials.php';
             $weekday = (int) date('w');
-
         ?>
     </head>
     <body>
-        <?php include INCL_PATH.'banner.php' ?>
+        <div id="container">
+            <?php include INCL.'header.php' ?>
 
-        <main>
-            <?php menu_tables($weekday) ?>
-        </main>
+            <main>
+                <?php draw_specials($weekday) ?>
+            </main>
 
-        <?php include INCL_PATH.'foot.php' ?>
+            <?php include INCL.'footer.php' ?>
+        </div>
     </body>
 </html>
