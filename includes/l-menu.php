@@ -1,7 +1,7 @@
-<?php include "items.php" ?>
+<?php include "menu/items.php" ?>
 
 <table>
-    <caption><h4>Breakfast Menu</h4></caption>
+    <caption><h4>Lunch Menu</h4></caption>
     <thead>
         <tr>
             <th>Name</th>
@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <?php
-            foreach (MENU['b'] as $item): echo <<<ITEM
+            foreach (MENU['l'] as $item): echo <<<ITEM
                 <tr>
                     <td>$item[name]</td>
                     <td>$item[cost]</td>

@@ -14,7 +14,7 @@
             <?php include INCL.'header.php' ?>
 
             <main>
-                <?php include_once INCL.'menu/d-menu.php' ?>
+                <?php include_once INCL.'d-menu.php' ?>
             </main>
             
             <?php include INCL.'footer.php' ?>
