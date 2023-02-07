@@ -55,7 +55,7 @@ nav a:last-of-type  { border-right: 0px; }
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-image: url(../images/banner.jpg);
+    background-image: url(../images/header/banner.jpg);
 }
 
 main {
@@ -82,9 +82,6 @@ table {
     border-collapse: collapse;
     color: antiquewhite;
 }
-td {
-    height: 115px !important;
-}
 td.full-row {
     text-align: center;
     padding: 20px 0;
@@ -102,4 +99,8 @@ td.with-image {
     background-color: #22130d;
     color: antiquewhite;
     flex: 0 1 auto;
+}
+
+main p {
+    color: antiquewhite;
 }
