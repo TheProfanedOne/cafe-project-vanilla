@@ -1,13 +1,4 @@
-<?php
-    define('MENU',[
-        [
-            'name'     => 'Meatloaf and Mashed Potatoes',
-            'cost'     => '$'.number_format(0.0, 2),
-            'image'    => 'images/dinner/meatloaf.jpg',
-            'imageAlt' => 'An image of Meatloaf with Mashed Potatoes'
-        ],
-    ]);
-?>
+<?php include "items.php" ?>
 
 <table>
     <caption><h4>Dinner Menu</h4></caption>
@@ -20,7 +11,7 @@
     </thead>
     <tbody>
         <?php
-            foreach (MENU as $item): echo <<<ITEM
+            foreach (MENU['d'] as $item): echo <<<ITEM
                 <tr>
                     <td>$item[name]</td>
                     <td>$item[cost]</td>

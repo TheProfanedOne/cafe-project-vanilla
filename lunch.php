@@ -7,14 +7,14 @@
         <link rel="stylesheet" href="css/base.css">
         <title>Lunch</title>
 
-        <?php const INCL = 'includes/' ?>
+        <?php const INCL = 'includes/'; ?>
     </head>
     <body>
         <div id="container">
             <?php include INCL.'header.php' ?>
 
             <main>
-                <?php include INCL.'menu/l-menu.php' ?>
+                <?php include_once INCL.'menu/l-menu.php' ?>
             </main>
             
             <?php include INCL.'footer.php' ?>
