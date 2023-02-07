@@ -11,7 +11,7 @@ jobs:
           - name: 📂 Sync files
             uses: SamKirkland/FTP-Deploy-Action@4.3.3
             with:
-                server: ftp.steverobinett.com
+                server: ftp.steverobinett.net
                 username: matthew@matthew.steverobinett.net
                 password: ${{ secrets.ftp_password }}
                 port: 21
