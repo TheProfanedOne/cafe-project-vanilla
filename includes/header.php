@@ -2,7 +2,7 @@
     <div id="banner">
         <span>RISE AND GRIND</span>
     </div>
-    <form action="index.php" method="POST">
+    <form action="" method="POST">
         <nav>
             <span>
                 <label for="h">Home</label>
