@@ -19,7 +19,7 @@
             <?php include INCL.'header.php' ?>
 
             <main>
-                <p>Something Else, Once Again</p>
+                <p>Hello, There</p>
                 <?php draw_specials($weekday) ?>
             </main>
 
