@@ -19,7 +19,6 @@
             <?php include INCL.'header.php' ?>
 
             <main>
-                <p>Hello, There</p>
                 <?php draw_specials($weekday) ?>
             </main>
 
