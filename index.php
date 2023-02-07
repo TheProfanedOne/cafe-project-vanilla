@@ -10,7 +10,6 @@
 
         <?php
             const INCL = 'includes/';
-            include_once INCL.'specials.php';
             $weekday = (int) date('w');
         ?>
     </head>
@@ -19,7 +18,7 @@
             <?php include INCL.'header.php' ?>
 
             <main>
-                <?php draw_specials($weekday) ?>
+                <?php include_once INCL."specials/specials_$weekday.php" ?>
             </main>
 
             <?php include INCL.'footer.php' ?>
