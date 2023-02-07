@@ -17,7 +17,7 @@
             <?php include INCL.'header.php' ?>
 
             <main>
-                <?php include_once INCL."specials/specials.php" ?>
+                <?php include INCL."specials.php" ?>
             </main>
 
             <?php include INCL.'footer.php' ?>
