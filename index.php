@@ -1,3 +1,7 @@
+<?php
+    const INCL = 'includes/';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,18 +11,13 @@
         <meta name=description content="The Cafe's Home Page">
         <link rel=stylesheet href=css/base.css>
         <title>Cafe Home Page</title>
-
-        <?php
-            const INCL = 'includes/';
-            $weekday = (int) date('w');
-        ?>
     </head>
     <body>
         <div id="container">
             <?php include INCL.'header.php' ?>
 
             <main>
-                <?php include_once INCL."specials/specials_$weekday.php" ?>
+                <?php include_once INCL."specials/specials.php" ?>
             </main>
 
             <?php include INCL.'footer.php' ?>
