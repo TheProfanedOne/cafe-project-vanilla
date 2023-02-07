@@ -1,8 +1,9 @@
+<!DOCTYPE html>
+
 <?php
     const INCL = 'includes/';
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset=UTF-8>
