@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="The Cafe's Home Page (and Daily Special)">
-        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="css/base.css">
         <title>Cafe Home Page</title>
     </head>
     <body>
