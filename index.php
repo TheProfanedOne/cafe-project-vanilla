@@ -1,9 +1,9 @@
 <?php
     const INCL = 'includes/';
 
-    $b_set = isset($_POST['b']);
-    $l_set = isset($_POST['l']);
-    $d_set = isset($_POST['d']);
+    $b_set = isset($_GET['b']);
+    $l_set = isset($_GET['l']);
+    $d_set = isset($_GET['d']);
 ?>
 
 <!DOCTYPE html>
