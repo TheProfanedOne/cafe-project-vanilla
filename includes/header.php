@@ -1,5 +1,5 @@
 <header>
-    <div id="banner">
+    <div>
         <span>RISE AND GRIND</span>
     </div>
     <nav>

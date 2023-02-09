@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Wild World';
+    src: url(fonts/wild_world.otf);
+}
+
+$coffee-bg: #22130d;
+$flex-hf: 0 1 auto;
+$flex-main: 1 1 auto;
+$aw: antiquewhite;
+
+@mixin flex-box($flow, $center: false) {
+    display: flex;
+    flex-flow: $flow;
+
+    @if $center {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// General Styles
+body { margin: 0; }
+:root {
+    background-color: rgb(23, 39, 39);
+    font-family: sans-serif;
+}
+#container {
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+// Header Styles
+header {
+    width: 100%;
+    background-color: $coffee-bg;
+    @include flex-box(column wrap);
+    flex: $flex-hf;
+
+    div {
+        font-family: 'Wild World';
+        font-size: 7em;
+        color: $aw;
+        padding: 0.3em 0;
+        @include flex-box(column, true);
+        justify-self: center;
+        width: 100%;
+        background-image: url(../images/header/banner.jpg);
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        a {
+            width: 100%;
+            text-align: center;
+            color: $aw;
+            padding: 10px 0;
+            text-decoration: none;
+            border-right: 1px solid $aw;
+            border-left: 1px solid $aw;
+
+            &:first-of-type { border-left: 0px; }
+            &:last-of-type  { border-right: 0px; }
+        }
+    }
+}
+
+// Content Styles
+main {
+    @include flex-box(column wrap, true);
+    flex: $flex-main;
+
+    table {
+        border-collapse: collapse;
+        color: $aw;
+
+        &, td { border: 1px solid; }
+        th    { border: 2px solid; }
+        th, td {
+            width: 12rem;
+            box-sizing: border-box;
+            position: relative;
+        }
+        img {
+            height: 109px;
+            width: auto;
+            box-sizing: border-box;
+        }
+        td {
+            &.full-row {
+                text-align: center;
+                padding: 20px 0;
+            }
+            &.with-image { padding: 0; }
+        }
+    }
+}
+
+// Footer Styles
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    padding: 10px 0;
+    background-color: $coffee-bg;
+    color: $aw;
+    flex: $flex-hf;
+}
