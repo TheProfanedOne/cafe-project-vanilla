@@ -93,6 +93,13 @@ main table td.full-row {
 main table td.with-image {
   padding: 0;
 }
+main form label {
+  color: antiquewhite;
+}
+main > h1, main > p {
+  color: antiquewhite;
+  text-align: center;
+}
 
 footer {
   width: 100%;
