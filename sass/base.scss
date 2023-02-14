@@ -104,6 +104,11 @@ main {
     form label {
         color: $aw;
     }
+
+    > h1, > p {
+        color: $aw;
+        text-align: center;
+    }
 }
 
 // Footer Styles
