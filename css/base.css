@@ -96,7 +96,7 @@ main table td.with-image {
 main form label {
   color: antiquewhite;
 }
-main > h1, main > p {
+main > h1, main > h3 {
   color: antiquewhite;
   text-align: center;
 }
