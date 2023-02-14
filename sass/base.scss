@@ -100,6 +100,10 @@ main {
             &.with-image { padding: 0; }
         }
     }
+
+    form label {
+        color: $aw;
+    }
 }
 
 // Footer Styles

@@ -21,12 +21,20 @@
                         <input type="text" name="user-first" id="firstName" placeholder="First Name">
                         <input type="text" name="user-last" id="lastName" placeholder="Last Name">
 
+                        <br>
+                        <br>
+
                         <label for="mail">Email</label>
                         <input id="mail" name="user-email" type="email" placeholder="example@example.com">
+
+                        <br>
 
                         <label for="pass">Password</label>
                         <input id="pass" name="user-pass" type="password">
 
+                        <br>
+                        <br>
+                        
                         <input type="submit" id="login" value="Login/Register">
                     </fieldset>
                 </form>
