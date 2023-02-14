@@ -18,8 +18,8 @@
             <main>
                 <form id="login-form" action="home.php" method="post">
                     <fieldset>
-                        <input type="text" name="user-first" id="firstName" placeholder="First Name">
-                        <input type="text" name="user-last" id="lastName" placeholder="Last Name">
+                        <input type="text" name="user-first" id="firstName" placeholder="First Name" required>
+                        <input type="text" name="user-last" id="lastName" placeholder="Last Name" required>
 
                         <br>
                         <br>
@@ -34,7 +34,7 @@
 
                         <br>
                         <br>
-                        
+
                         <input type="submit" id="login" value="Login/Register">
                     </fieldset>
                 </form>
