@@ -1,5 +1,3 @@
-<?php include "menu/items.php" ?>
-
 <table>
     <caption><h4>Breakfast Menu</h4></caption>
     <thead>
@@ -11,13 +9,17 @@
     </thead>
     <tbody>
         <?php
-            foreach (MENU['b'] as $item): echo <<<ITEM
+            $result = mysqli_query($db_con,
+                "SELECT (item_name, item_price, image_src, image_alt) FROM menu WHERE category = 'b'"
+            );
+
+            while ($row = mysqli_fetch_assoc($result)): echo <<<ITEM
                 <tr>
-                    <td>$item[name]</td>
-                    <td>$item[cost]</td>
-                    <td><img src="$item[image]" alt="$item[imageAlt]"></td>
+                    <td>$row[item_name]</td>
+                    <td>$row[item_price]</td>
+                    <td><img src="$row[image_src]" alt="$row[image_alt]"></td>
                 </tr>
-            ITEM; endforeach; unset($cat, $item);
+            ITEM; endwhile;
         ?>
     </tbody>
 </table>

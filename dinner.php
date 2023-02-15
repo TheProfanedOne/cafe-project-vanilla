@@ -1,4 +1,8 @@
-<?php const INCL = 'includes/'; ?>
+<?php
+    const INCL = 'includes/';
+
+    include INCL.'db-conn.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">

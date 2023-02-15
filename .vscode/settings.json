@@ -1,0 +1,30 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "162.241.226.112",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Matthew213DevCon",
+            "password": "Csci213+#006",
+            "username": "steverq1_dev",
+            "database": "steverq1_devdb"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "162.241.226.112",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Matthew213Con",
+            "database": "steverq1_matthew",
+            "username": "steverq1_matthew",
+            "password": "Csci213+#001"
+        }
+    ]
+}

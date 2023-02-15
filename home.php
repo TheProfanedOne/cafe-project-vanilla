@@ -1,38 +1,36 @@
 <?php
     const INCL = 'includes/';
-    const DATA = 'data/';
 
     $first_name = $_POST['user-first'];
     $last_name = $_POST['user-last'];
     $email = $_POST['user-email'];
     $pass = $_POST['user-pass'];
+
+    include INCL.'db-conn.php';
     
-    $users = array_map(
-        'str_getcsv',
-        file(
-            DATA.'users.csv',
-            FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES
-        )
+    $stmt = mysqli_prepare($db_con,
+        "SELECT (pass) FROM users WHERE first_name = ? AND last_name = ? AND email = ?"
     );
+    mysqli_stmt_bind_param($stmt, "sss", $first_name, $last_name, $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
     $user_exists = false;
-
-    foreach ($users as $user) {
-        if ($user[0] == $first_name && $user[1] == $last_name && $user[2] == $email) {
-            $user_exists = true;
-            break;
-        }
-    }
-
     $correct_pass = false;
 
-    if ($user_exists) {
-        $correct_pass = password_verify($pass, $user[3]);
+    if (mysqli_num_rows($result) == 1) {
+        $user_exists = true;
+        $user = mysqli_fetch_assoc($result);
+        $correct_pass = password_verify($pass, $user['pass']);
+    } else if (mysqli_num_rows($result) > 1) {
+        die("Error: Multiple users with the same name and email address.");
     } else {
-        $users = array($first_name, $last_name, $email, password_hash($pass, PASSWORD_DEFAULT));
-        $fp = fopen(DATA.'users.csv', 'a');
-        fputcsv($fp, $users);
-        fclose($fp);
+        $new_user = array($first_name, $last_name, $email, password_hash($pass, PASSWORD_DEFAULT));
+        $stmt = mysqli_prepare($db_con,
+            "INSERT INTO users (first_name, last_name, email, pass) VALUES (?, ?, ?, ?)"
+        );
+        mysqli_stmt_bind_param($stmt, "ssss", ...$new_user);
+        mysqli_stmt_execute($stmt);
     }
 
     $return_to_index = $user_exists && !$correct_pass;
