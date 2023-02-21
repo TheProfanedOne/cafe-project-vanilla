@@ -14,4 +14,3 @@ jobs:
         server: ftp.steverobinett.net
         username: matthew@matthew.steverobinett.net
         password: ${{ secrets.ftp_password }}
-        port: 21
